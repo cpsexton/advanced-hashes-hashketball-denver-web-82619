@@ -138,7 +138,6 @@ def shoe_size(player_name)
   end
 end
 
-
 def team_colors(name_of_team)
   game_hash.each do |team, chars|
     game_hash[team].each do |name, stats|
@@ -149,8 +148,6 @@ def team_colors(name_of_team)
   end
 end
 
-
-
 def team_names
   teams = []
   game_hash.each do |team, chars|
@@ -158,8 +155,6 @@ def team_names
   end
   return teams
 end
-
-
 
 def player_numbers(name_of_team)
   array = []
@@ -181,17 +176,11 @@ def player_numbers(name_of_team)
   return array
 end
 
-
-
-
 def player_stats(player_name)
   game_hash.each do |team, chars|
     chars.each do |name, stats|
-      #binding.pry       
-
       if name == :players
         stats.each do |player, hash|
-           #binding.pry  
            if player_name == player
            return hash
            end
@@ -200,7 +189,6 @@ def player_stats(player_name)
     end
   end
 end 
-
 
 def big_shoe_rebounds
   hash = game_hash
